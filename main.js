@@ -14,6 +14,13 @@ $(function() {
 		});
 		$('#msg').text('you typed: ' + str + '. you are: ' + val + '. ' + msg);
 		$('#msg1').load('data.txt');
+		$.getJSON('data.php', {'id':str}, function(response, status, xhr){
+			var ol = $('<ul></ul>');
+			ol.append('<li>姓名：' + response.name + '</li>');
+			ol.append('<li>電郵信箱：' + response.mail + '</li>');
+			ol.append('<li>電話號碼：' + response.tel + '</li>');
+			$('#msg2').empty().append(ol);
+		});
 	});
 	$('#btn2').click(function(){
 		if (flg){
