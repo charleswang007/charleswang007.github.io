@@ -14,6 +14,7 @@ $(function() {
 		});
 		$('#msg').text('you typed: ' + str + '. you are: ' + val + '. ' + msg);
 		$('#msg1').load('data.txt');
+		$('#msg2').empty().append("puppy wang");
 		$.getJSON('data.php', {'id':str}, function(response, status, xhr){
 			var ol = $('<ul></ul>');
 			ol.append('<li>姓名：' + response.name + '</li>');
