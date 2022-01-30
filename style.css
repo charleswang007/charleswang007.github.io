@@ -1,26 +1,7 @@
 body {
-	margin: 10px;
-	font-size: 18pt;
 	color: #999;
-}
-
-h1 {
-	color: #999;
-	font-size: 28pt;
-}
-.A {
-	color: green;
-	background: white
-}
-.B {
-	color: white;
-	background: blue;
+	padding: 5px 16px;
 }
 p {
-	margin: 5px;
-	/* border: 2px solid lightgray; */
-}
-div {
-	margin: 5px;
-	border: 1px solid red;
+	font-size: 18pt;
 }
