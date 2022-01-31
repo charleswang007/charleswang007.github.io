@@ -1,12 +1,9 @@
-﻿class MyClass {
-	constructor(public title: string, public message: string){}
+﻿function calc(price:number, tax:number):number {
+	return Math.floor(price * (1.0 + tax));
+}
 
-	print(){
-		return "<h1>" + this.title + "</h1>" +
-			"<p>" + this.message + "</p>";
-	}
-};
-
-var msg:MyClass = new MyClass("Hello", "this is TypeScript sample!");
-
-document.write(msg.print());
+function doClick():void {
+	let text1:HTMLInputElement = document.querySelector('#text1');
+	let msg:Element = document.querySelector('#msg');
+	msg.innerHTML = calc(Number(text1.value), 0.05) + '元';
+}
