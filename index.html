@@ -9,10 +9,25 @@
 
 <body onload="initial();">
 	<h1>Vue.js</h1>
-	<div id="msg">
-		<p v-html="message"></p>
-		<input type="text" v-model="text1">
-		<input type="button" v-on:click="doAction" value="click">
+	<div  id="msg">
+	<p v-bind:style="{'color':selF, 'background':selB}" 
+		v-on:click="change();">樣式操作範例。</p>
+
+	<p><select v-model="selF">
+		<option>white</option>
+		<option>black</option>
+		<option>red</option>
+		<option>blue</option>
+		<option>green</option>
+	</select>
+	<select v-model="selB">
+		<option>white</option>
+		<option>black</option>
+		<option>red</option>
+		<option>blue</option>
+		<option>green</option>
+	</select>
+	</p>
 	</div>
 </body>
 
