@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Hello</title>
+	<script src="https://unpkg.com/vue/dist/vue.js"></script>
+	<script src="main.js"></script>
+	<link rel="stylesheet" href="style.css"></link>
+</head>
+
+<body onload="initial();">
+	<h1>Vue.js</h1>
+	<div  id="msg">
+	<p v-bind:style="{'color':selF, 'background':selB}" 
+		v-on:click="change();">樣式操作範例。</p>
+
+	<p><select v-model="selF">
+		<option>white</option>
+		<option>black</option>
+		<option>red</option>
+		<option>blue</option>
+		<option>green</option>
+	</select>
+	<select v-model="selB">
+		<option>white</option>
+		<option>black</option>
+		<option>red</option>
+		<option>blue</option>
+		<option>green</option>
+	</select>
+	</p>
+	</div>
+</body>
+
+</html>
+
